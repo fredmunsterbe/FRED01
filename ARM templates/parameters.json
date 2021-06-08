@@ -3,13 +3,13 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "resourceName": {
-            "value": "fdsfdsf"
+            "value": "fredsakscluster"
         },
         "location": {
             "value": "germanywestcentral"
         },
         "dnsPrefix": {
-            "value": "fdsfdsf-dns"
+            "value": "fredsakscluster-dns"
         },
         "kubernetesVersion": {
             "value": "1.19.11"
