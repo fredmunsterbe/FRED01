@@ -2,100 +2,62 @@
     "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
+        "resourceName": {
+            "value": "fdsfdsf"
+        },
         "location": {
-            "value": "northeurope"
+            "value": "germanywestcentral"
         },
-        "networkInterfaceName": {
-            "value": "fredspod01382"
+        "dnsPrefix": {
+            "value": "fdsfdsf-dns"
         },
-        "networkSecurityGroupName": {
-            "value": "fredspod01-nsg"
+        "kubernetesVersion": {
+            "value": "1.19.11"
         },
-        "networkSecurityGroupRules": {
-            "value": [
-                {
-                    "name": "SSH",
-                    "properties": {
-                        "priority": 300,
-                        "protocol": "TCP",
-                        "access": "Allow",
-                        "direction": "Inbound",
-                        "sourceAddressPrefix": "*",
-                        "sourcePortRange": "*",
-                        "destinationAddressPrefix": "*",
-                        "destinationPortRange": "22"
-                    }
-                }
-            ]
+        "networkPlugin": {
+            "value": "azure"
         },
-        "subnetName": {
-            "value": "default"
+        "enableRBAC": {
+            "value": true
         },
-        "virtualNetworkName": {
-            "value": "fredspod01_group-vnet"
+        "enablePrivateCluster": {
+            "value": false
         },
-        "addressPrefixes": {
-            "value": [
-                "10.0.0.0/16"
-            ]
+        "enableHttpApplicationRouting": {
+            "value": false
         },
-        "subnets": {
-            "value": [
-                {
-                    "name": "default",
-                    "properties": {
-                        "addressPrefix": "10.0.0.0/24"
-                    }
-                }
-            ]
+        "enableAzurePolicy": {
+            "value": true
         },
-        "publicIpAddressName": {
-            "value": "fredspod01-ip"
+        "vmssNodePool": {
+            "value": true
         },
-        "publicIpAddressType": {
-            "value": "Static"
+        "vnetSubnetID": {
+            "value": "/subscriptions/e76d4d78-943c-42aa-ab89-3c336deee88f/resourceGroups/Code21/providers/Microsoft.Network/virtualNetworks/Code21-vnet/subnets/default"
         },
-        "publicIpAddressSku": {
-            "value": "Standard"
+        "serviceCidr": {
+            "value": "10.0.0.0/16"
         },
-        "virtualMachineName": {
-            "value": "fredspod01"
+        "dnsServiceIP": {
+            "value": "10.0.0.10"
         },
-        "virtualMachineComputerName": {
-            "value": "fredspod01"
+        "dockerBridgeCidr": {
+            "value": "172.17.0.1/16"
         },
-        "virtualMachineRG": {
-            "value": "fredspod01_group"
+        "workspaceName": {
+            "value": "DefaultWorkspace-e76d4d78-943c-42aa-ab89-3c336deee88f-DEWC"
         },
-        "osDiskType": {
-            "value": "StandardSSD_LRS"
+        "omsWorkspaceId": {
+            "value": "/subscriptions/e76d4d78-943c-42aa-ab89-3c336deee88f/resourceGroups/DefaultResourceGroup-DEWC/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-e76d4d78-943c-42aa-ab89-3c336deee88f-DEWC"
         },
-        "virtualMachineSize": {
-            "value": "Standard_D2s_v3"
+        "workspaceRegion": {
+            "value": "germanywestcentral"
         },
-        "adminUsername": {
-            "value": "azureuser"
+        "acrName": {
+            "value": "fredsreg01"
         },
-        "zone": {
-            "value": "1"
-        },
-        "autoShutdownStatus": {
-            "value": "Enabled"
-        },
-        "autoShutdownTime": {
-            "value": "19:00"
-        },
-        "autoShutdownTimeZone": {
-            "value": "UTC"
-        },
-        "autoShutdownNotificationStatus": {
-            "value": "Enabled"
-        },
-        "autoShutdownNotificationLocale": {
-            "value": "en"
-        },
-        "autoShutdownNotificationEmail": {
-            "value": "munster.fred@gmail.com"
+        "acrResourceGroup": {
+            "value": "Code21"
         }
     }
 }
